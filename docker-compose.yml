@@ -1,0 +1,13 @@
+version: '2.1'
+#version: '3'
+services:
+    node:
+        container_name: node-lab
+        hostname: node-lab
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./apps:/app/apps:rw
+        ports:
+            - 3000:3000
